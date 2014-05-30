@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Change Body Color</title>
+    <link href="../styles/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <p>
+            03. Create a function that gets the value of <span class="styled">&lt;type="color"&gt;</span> and sets the background of the body to this value
+        </p>
+    </header>
+    <input type="color" id="input-color" />
+    <button onclick="onChangeBodyColorButtonClick()">Change body color</button>
+    <script>
+        function onChangeBodyColorButtonClick() {
+            "use strict";
+
+            var inputColor = document.getElementById('input-color');
+
+            document.body.style.background = inputColor.value;
+        }
+    </script>
+</body>
+</html>

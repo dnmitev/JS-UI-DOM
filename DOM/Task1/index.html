@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Selecting all the div nodes</title>
+    <link href="../styles/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <p>
+            01. Write a script that selects all the div nodes that are directly inside other div elements
+            <ul>
+                <li>Create a function using <span class="styled">querySelectorAll()</span></li>
+                <li>Create a function using <span class="styled">getElementsByTagName()</span></li>
+            </ul>
+        </p>
+    </header>
+    <button onclick="onUseQuerySelectorClick()">Use Query Selector</button>
+    <button onclick="onGetElementsByTagNameClick()">Use Get Elements By Tag Name</button>
+    <div id="wrapper">
+        <div>
+            1 level nested div into div
+            <div>
+                2 levels nested div into div
+            </div>
+        </div>
+    </div>
+    <div>
+        Not nested div into div
+    </div>
+    <script>
+        function onUseQuerySelectorClick() {
+            "use strict";
+
+            var nestedDiv = document.querySelectorAll('div>div'),
+                i;
+
+            for (i = 0; i < nestedDiv.length; i += 1) {
+                alert(nestedDiv[i].innerText);
+            }
+        }
+
+        function onGetElementsByTagNameClick() {
+            "use strict";
+
+            var nestedDiv = document.getElementsByTagName('div'),
+                i;
+
+            for (i = 0; i < nestedDiv.length; i += 1) {
+                alert(nestedDiv[i].innerText);
+            }
+        }
+    </script>
+</body>
+</html>

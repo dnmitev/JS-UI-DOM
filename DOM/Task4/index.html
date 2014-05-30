@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Select input value</title>
+    <link href="../styles/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <p>
+            04. Write a script that shims querySelector and querySelectorAll in older browsers
+        </p>
+    </header>
+    <div>
+        Here is one div without nothing nested in it.
+    </div>
+    <div class="div-class">
+        Here is one div with a class 'div-class'
+    </div>
+    <script src="querySelector.js"></script>
+    <script>
+        var divs = document.querySelectorAll('div'),
+            len = divs.length,
+            i;
+
+        for (i = 0; i < len; i += 1) {
+            console.log(divs[i].innerText);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Select input value</title>
+    <link href="../styles/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <p>
+            03. Create a function that gets the value of <span class="styled">&lt;type="text"&gt;</span> ands prints its value to the console
+        </p>
+    </header>
+    <input type="text" id="input-value" value="Pesho plet plete prez 3 reda preplita sled izpita po JS zalita"/>
+    <button onclick="onGetInputValueButtonClick()">Get Input Value</button>
+    <script>
+        function onGetInputValueButtonClick() {
+            "use strict";
+
+            var inputValue = document.getElementById('input-value').value;
+
+            console.log(inputValue);
+        }
+    </script>
+</body>
+</html>
