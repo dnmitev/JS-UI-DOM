@@ -1,0 +1,25 @@
+﻿header {
+    background-color: lightseagreen;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+    header p {
+        margin: 5px 10px;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+    header ul li {
+        font-style: italic;
+    }
+
+.styled {
+    font-weight: bold;
+    color: blue;
+}
+
+#canvas {
+    border: 1px solid black;
+    border-radius: 5px;
+}
