@@ -1,0 +1,18 @@
+﻿#container {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: lightblue ;
+}
+#btn-test {
+  background: yellow;
+  color: red;
+  font-size: 2em;
+  border-radius: 10px;
+  padding: 5px;
+}
+#btn-test:hover {
+  background: red;
+  color: yellow;
+}
+/*# sourceMappingURL=style.css.map */
