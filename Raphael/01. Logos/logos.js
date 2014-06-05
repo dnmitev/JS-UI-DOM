@@ -23,4 +23,26 @@
         stroke: "#C1D832"
     });
 
+    var you = paper.text(280, 300, "YOU");
+    you.scale(0.6, 1);
+    you.attr({
+        "font-weight": "bold",
+        "font-size": 100,
+        "font-family": "Calibri, Consolas, Arial",
+        fill: "#4A4A4A"
+    });
+
+    var rect = paper.rect(340, 250, 160, 100,25);
+    rect.attr({
+        fill: "#EC262A"
+    });
+
+    var tube = paper.text(420, 300, "TUBE");
+    tube.scale(0.6, 1);
+    tube.attr({
+        "font-weight": "bold",
+        "font-size": 100,
+        "font-family": "Calibri, Consolas, Arial",
+        fill: "white"
+    });
 })();
