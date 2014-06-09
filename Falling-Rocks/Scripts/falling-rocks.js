@@ -4,7 +4,7 @@ window.onload = function () {
 
     var CONST = {
         dwarfStartX: 500,
-        dwarfStartY: 500,
+        dwarfStartY: 400,
         dwarfImageWidth: 80,
         dwarfImageHeight: 100,
         rockImageWidth: 40,
@@ -14,81 +14,80 @@ window.onload = function () {
     var stage = new Kinetic.Stage({
         container: 'container',
         width: 960,
-        height: 640
+        height: 500
     });
 
     var layer = new Kinetic.Layer();
 
     // image objects
-    var dwarfImageObj = new Image(),
-        rockImageObj = new Image();
+    var dwarfImageObj = new Image();
+    // var rockImageObj = new Image();
 
-    function GameObject(x, y, image, width, height, isControllable) {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        this.image = image;
-        this.isControllable = isControllable;
+    //function GameObject(x, y, image, width, height, isControllable) {
+    //    this.isControllable = isControllable;
 
-        this.imageObj =  new Kinetic.Image({
-                x: this.x,
-                y: this.y,
-                image: this.image,
-                width: this.width,
-                height: this.height
-            });
+    //    this.imageObj = new Kinetic.Image({
+    //        x: x,
+    //        y: y,
+    //        image: image,
+    //        width: width,
+    //        height: height
+    //    });
 
-        this.moveLeft = function () {
-            this.x -= this.width;
-            this.draw();
-        };
+    //    this.moveLeft = function () {
+    //        this.imageObj.setX(this.imageObj.attrs.x -= 50);
+    //    };
 
-        this.moveRight = function () {
-            this.x += this.width;
-            this.draw();
-        };
-
-    }
-
-    var dwarf = new GameObject(CONST.dwarfStartX, CONST.dwarfStartY, dwarfImageObj, CONST.dwarfImageWidth, CONST.dwarfImageWidth, true);
-    var rock = new GameObject(500, 50, rockImageObj, CONST.rockImageWidth, CONST.rockImageWidth);
-
-    layer.add(dwarf.imageObj);
-    layer.add(rock.imageObj);
-
-    stage.add(layer);
-    //layer.draw();
-
-    //var amplitude = 100;
-    //var period = 2000; // in ms
-    //var centerX = stage.width() / 2;
-    //var centerY = stage.height() / 2;
-
-    //var anim = new Kinetic.Animation(function (frame) {
-    //    dwarf.imageObj.move(10);
-    //}, layer);
-
-    //anim.start();
+    //    this.moveRight = function () {
+    //        this.imageObj.setX(this.imageObj.attrs.x += 50);
+    //    };
+    //}
 
 
-    dwarfImageObj.src = "../images/dwarf.png";
-    rockImageObj.src = "../images/rock.png";
 
-    // event listener to control the dwarf
-    document.body.addEventListener("keydown", function (e) {
-        e = e || window.event;
+    dwarfImageObj.onload = function () {
+        //var dwarf = new GameObject(CONST.dwarfStartX, CONST.dwarfStartY, dwarfImageObj, CONST.dwarfImageWidth, CONST.dwarfImageWidth, true);
+        //var rock = new GameObject(500, 50, rockImageObj, CONST.rockImageWidth, CONST.rockImageWidth);
+        var dwarf = new Kinetic.Image({
+            x: CONST.dwarfStartX,
+            y: CONST.dwarfStartY,
+            image: dwarfImageObj,
+            width: CONST.dwarfImageWidth,
+            height: CONST.dwarfImageHeight
+        });
 
-        switch (e.keyCode) {
-            case 37:
-                dwarf.moveLeft();
-                break;
-            case 39:
-                dwarf.moveRight();
-                break;
+        //var rock = new Kinetic.Image({
+        //    x: 500,
+        //    y: 50,
+        //    image: rockImageObj,
+        //    width: CONST.rockImageWidth,
+        //    height: CONST.rockImageHeight
+        //});
+
+        layer.add(dwarf);
+        //layer.add(rock);
+
+        stage.add(layer);
+
+        //event listener to control the dwarf
+        function onKeyDown(evt) {
+            switch (evt.keyCode) {
+                case 37:  // left arrow
+                    //dwarf.moveLeft();
+                    //dwarf.setX(dwarf.attrs.x -= 80);
+                    dwarf.x(dwarf.x() - 80);
+                    break;
+                case 39:  // right arrow
+                    //dwarf.moveRight();
+                    //dwarf.setX(dwarf.attrs.x += 80);
+                    dwarf.x(dwarf.x() + 80);
+                    break;
+            }
         }
 
-        stage.draw();
-    });
+        window.addEventListener('keydown', onKeyDown);
+    }
 
+    dwarfImageObj.src = "../images/dwarf.png";
+    //rockImageObj.src = "../images/rock.png";
 }
