@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>TODO - List</title>
+    <link href="styles/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>
+                TODO - List
+            </h1>
+        </header>
+        <section id="input-data">
+            <label for="title-input">Title</label>
+            <input type="text" id="title-input" placeholder="Task Title..." />
+            <br />
+            <label for="task-notes">Notes</label>
+            <textarea id="task-notes" placeholder="Task notes..."></textarea>
+            <br />
+            <button onclick="onAddTaskBtnClick()" id="add-btn">Add task</button>
+            <button onclick="onHideBtnClick()" id="show-hide-btn">Hide</button>
+        </section>
+        <section id="todo-list"></section>
+    </div>
+    <script src="scripts/todo-list.js"></script>
+</body>
+</html>

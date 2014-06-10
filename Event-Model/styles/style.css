@@ -1,0 +1,54 @@
+﻿#wrapper {
+    width: 50%;
+    background-color: lightgreen;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+header {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: yellowgreen;
+    text-align: center;
+}
+
+    header > h1 {
+        font-family: 'Freestyle Script','Bookman Old Style',Arial;
+        font-size: 2.2em;
+        font-style: italic;
+        margin: 5px 0;
+        padding: 5px 15px;
+    }
+
+label {
+    font-size: 1.5em;
+    vertical-align: central;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: yellowgreen;
+    padding: 5px;
+}
+
+    button:hover {
+        font-weight: bold;
+        color: purple;
+    }
+
+fieldset {
+    background-color: yellowgreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: right;
+}
+
+    fieldset legend {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 5px;
+        text-align: left;
+    }
