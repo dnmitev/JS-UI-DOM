@@ -11,7 +11,7 @@
         <h1>jQuery Slider</h1>
     </header>
     <div id="wrapper">
-        <button id="previous">Previus</button>
+        <button id="previous">Previous</button>
         <button id="next">Next</button>
         <div id="slider-content"></div>
         <div class="invisible data article selected">
@@ -58,7 +58,7 @@
 
             $selected.removeClass('selected');
 
-            if ($('.selected').prev().length > 0) {
+            if ($('.data').prev().length > 0) {
                 $selected.prev().addClass('selected');
             } else {
                 $('#slider-content').children(':first').addClass('selected');
@@ -73,7 +73,7 @@
             $('#slider-content').empty();
             $selected.removeClass('selected');
 
-            if ($('.selected').next().length > 0) {
+            if ($('.data').next().length > 0) {
                 $selected.next().addClass('selected');
             } else {
                 $('#slider-content').children(':last').addClass('selected');
