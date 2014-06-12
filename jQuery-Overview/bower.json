@@ -1,0 +1,16 @@
+{
+  "name": "jQuery-Overview",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dnmitev/JS-UI-DOM",
+  "authors": [
+    "Dimitar Mitev <dnmitev@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

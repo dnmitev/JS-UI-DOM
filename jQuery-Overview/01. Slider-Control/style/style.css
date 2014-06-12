@@ -1,0 +1,18 @@
+﻿#wrapper {
+  text-align: center;
+}
+#visible-content {
+  display: inline-block;
+  margin: 0 auto;
+}
+body > header h1 {
+  color: yellowgreen;
+  background-color: black;
+  text-align: center;
+}
+img {
+  border-radius: 15px;
+  height: 80%;
+  width: 80%;
+}
+/*# sourceMappingURL=style.css.map */
