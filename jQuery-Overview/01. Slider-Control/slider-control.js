@@ -2,9 +2,8 @@
 (function () {
     "use strict";
 
-    var $slider = $('#slider-content'),
-        timeInterval = 5000;
-    
+    var $slider = $('#slider-content');
+
     function onPreviousButtonClick() {
         var currentSlide = $slider.find('.selected');
 
