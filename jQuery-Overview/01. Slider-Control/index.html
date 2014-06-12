@@ -58,7 +58,7 @@
 
             $selected.removeClass('selected');
 
-            if ($selected.prev().length > 0) {
+            if ($('.selected').prev().length > 0) {
                 $selected.prev().addClass('selected');
             } else {
                 $('#slider-content').children(':first').addClass('selected');
@@ -73,7 +73,7 @@
             $('#slider-content').empty();
             $selected.removeClass('selected');
 
-            if ($selected.next().length > 0) {
+            if ($('.selected').next().length > 0) {
                 $selected.next().addClass('selected');
             } else {
                 $('#slider-content').children(':last').addClass('selected');
