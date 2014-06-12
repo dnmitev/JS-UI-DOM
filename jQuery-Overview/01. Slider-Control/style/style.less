@@ -1,17 +1,29 @@
 ﻿#wrapper {
     text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+
+    & > header > h1 {
+        color: yellowgreen;
+        background-color: black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
 }
 
-#visible-content {
+#slider-content {
     display: inline-block;
     margin: 0 auto;
 }
 
-body > header h1 {
-    color: yellowgreen;
-    background-color: black;
-    text-align: center;
+.invisible {
+    display: none;
 }
+
+.selected {
+    display: block;
+}
+
 
 img {
     border-radius: 15px;

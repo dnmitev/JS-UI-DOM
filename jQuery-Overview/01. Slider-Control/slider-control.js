@@ -2,41 +2,31 @@
 (function () {
     "use strict";
 
-    var $slides = $('.invisible'),
-        $selectedSlide = $('.selected');
-
-    $slides.hide(); // hide the slides that should be later showed
-
-    $('#slider-content').append($selectedSlide.html()); // show just the current slide
-
+    var $slider = $('#slider-content'),
+        timeInterval = 5000;
+    
     function onPreviousButtonClick() {
-        var $selected = $('.selected');
-        $('#slider-content').empty(); // delete #slide-content
+        var currentSlide = $slider.find('.selected');
 
-        $selected.removeClass('selected');
-        
-        if ($selected.prev().length > 0) {
-            $selected.prev().addClass('selected');
+        currentSlide.removeClass('selected');
+
+        if (currentSlide.prev().length > 0) {
+            currentSlide.prev().addClass('selected');
         } else {
-            $('#slider-content').children(':first').addClass('selected');
+            $slider.children(':last').addClass('selected');
         }
-
-        $('#slider-content').append($('.selected').html()); // show just the current slide
     }
 
     function onNextButtonClick() {
-        var $selected = $('.selected');
+        var currentSlide = $slider.find('.selected');
 
-        $('#slider-content').empty();
-        $selected.removeClass('selected');
+        currentSlide.removeClass('selected');
 
-        if ($selected.next().length > 0) {
-            $selected.next().addClass('selected');
+        if (currentSlide.next().length > 0) {
+            currentSlide.next().addClass('selected');
         } else {
-            $('#slider-content').children(':last').addClass('selected');
+            $slider.children(':first').addClass('selected');
         }
-
-        $('#slider-content').append($('.selected').html()); // show just the current slide
     }
 
     $(document).ready(function () {
