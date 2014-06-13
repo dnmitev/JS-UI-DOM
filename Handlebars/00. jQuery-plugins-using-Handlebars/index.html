@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Create jQuery plugins using Handlebars</title>
+    <link href="styles/style.min.css" rel="stylesheet" />
+    <script src="../Scripts/handlebars.min.js"></script>
+    <script src="../Scripts/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+    <div id="book-items-container">
+        <ul id="books-list" data-template="book-item-template"></ul>
+    </div>
+    <div id="table-students">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Mark</th>
+                </tr>
+            </thead>
+            <tbody id="students-table" data-template="students-row-template"></tbody>
+        </table>
+    </div>
+
+    <script id="book-item-template" type="text/x-handlebars-template">
+        {{#books}}
+        <li class="book-item">
+            <a href="/#books/{{this.id}}">
+                <strong>{{this.title}}</strong>
+            </a>
+        </li>
+        {{/books}}
+    </script>
+    <script id="students-row-template" type="text/x-handlebars-template">
+        {{#each students}}
+        <tr class="student-row">
+            <td>{{@index}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.mark}}</td>
+        </tr>
+        {{/each}}
+    </script>
+    <script src="jquery-plugins-using-handlebars.js"></script>
+</body>
+</html>

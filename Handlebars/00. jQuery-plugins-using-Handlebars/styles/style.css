@@ -1,0 +1,30 @@
+﻿#books-list {
+  list-style-type: none;
+  font-size: 1.5em;
+  display: inline-block;
+}
+#books-list > .book-item {
+  margin: 5px auto;
+  padding: 5px 10px;
+  text-align: center;
+}
+#books-list > .book-item:hover {
+  background-color: black;
+  text-decoration: underline;
+  color: yellowgreen;
+}
+#books-list > .book-item > a {
+  text-decoration: none;
+  color: inherit;
+}
+#table-students {
+  display: inline-block;
+}
+#table-students table,
+#table-students th,
+#table-students td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,32 @@
+﻿#books-list {
+    list-style-type: none;
+    font-size: 1.5em;
+    display: inline-block;
+
+    & > .book-item {
+        margin: 5px auto;
+        padding: 5px 10px;
+        text-align: center;
+
+        &:hover {
+            background-color: black;
+            text-decoration: underline;
+            color: yellowgreen;
+        }
+
+        & > a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+#table-students {
+    display: inline-block;
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+}
