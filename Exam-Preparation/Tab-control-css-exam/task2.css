@@ -1,0 +1,136 @@
+html,
+body,
+div,
+ul,
+li,
+a,
+table,
+thead,
+tbody,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+    font-size: 16px;
+    color: black;
+}
+
+div#wrapper {
+    width: 960px;
+}
+
+    div#wrapper .tab-strip {
+        margin-left: 15px;
+        margin-top: 15px;
+        display: inline-block;
+        list-style-type: none;
+        border: 1px solid black;
+        position: relative;
+        height: 230px;
+        width: 345px;
+        border-radius: 5px;
+    }
+
+        div#wrapper .tab-strip > li {
+            display: inline-block;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 5px 15px;
+            border-radius: 5px;
+            background: #eeeeee;
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMmQ0NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3N2QxZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+            background: -moz-linear-gradient(top, #eeeeee 0, #aaaaaa 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eeeeee), color-stop(100%, #aaaaaa));
+            background: -webkit-linear-gradient(top, #eeeeee 0, #aaaaaa 100%);
+            background: -o-linear-gradient(top, #eeeeee 0, #aaaaaa 100%);
+            background: -ms-linear-gradient(top, #eeeeee 0, #aaaaaa 100%);
+            background: linear-gradient(to bottom, #eeeeee 0, #aaaaaa 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$top-color', endColorstr='$bottom-color',GradientType=0 );
+        }
+
+            div#wrapper .tab-strip > li.current {
+                background: none;
+                border-bottom: none;
+                border-radius: 0;
+            }
+
+                div#wrapper .tab-strip > li.current .tab-btn {
+                    font-weight: bold;
+                }
+
+                div#wrapper .tab-strip > li.current .tab-content {
+                    display: block;
+                }
+
+            div#wrapper .tab-strip > li:last-of-type {
+                border-right: none;
+            }
+
+            div#wrapper .tab-strip > li:hover {
+                background: #eeeeee;
+            }
+
+            div#wrapper .tab-strip > li .tab-btn {
+                color: #000000;
+                text-decoration: none;
+                font-size: 1.4em;
+            }
+
+            div#wrapper .tab-strip > li .tab-content {
+                display: none;
+                position: absolute;
+                top: 35px;
+                left: 15px;
+                width: 330px;
+                height: 80%;
+                padding: 5px;
+                padding-top: 15px;
+            }
+
+                div#wrapper .tab-strip > li .tab-content > ul {
+                    list-style-type: disc;
+                }
+
+                    div#wrapper .tab-strip > li .tab-content > ul li ul {
+                        margin-left: 25px;
+                        list-style-type: lower-alpha;
+                    }
+
+                div#wrapper .tab-strip > li .tab-content > table {
+                    border: 1px solid black;
+                }
+
+                    div#wrapper .tab-strip > li .tab-content > table thead {
+                        background: #aaaaaa;
+                        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMmQ0NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3N2QxZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+                        background: -moz-linear-gradient(top, #aaaaaa 0%, #eeeeee 75%);
+                        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #aaaaaa), color-stop(75%, #eeeeee));
+                        background: -webkit-linear-gradient(top, #aaaaaa 0%, #eeeeee 75%);
+                        background: -o-linear-gradient(top, #aaaaaa 0%, #eeeeee 75%);
+                        background: -ms-linear-gradient(top, #aaaaaa 0%, #eeeeee 75%);
+                        background: linear-gradient(to bottom, #aaaaaa 0%, #eeeeee 75%);
+                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$top-color', endColorstr='$bottom-color',GradientType=0 );
+                    }
+
+                        div#wrapper .tab-strip > li .tab-content > table thead th {
+                            border: 1px solid black;
+                            padding: 5px 15px;
+                        }
+
+                    div#wrapper .tab-strip > li .tab-content > table tbody {
+                        background: #eeeeee;
+                    }
+
+                        div#wrapper .tab-strip > li .tab-content > table tbody td {
+                            border: 1px solid black;
+                            padding: 5px 15px;
+                        }

@@ -1,0 +1,94 @@
+html,
+body,
+div,
+form,
+input,
+button,
+a {
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: #000000;
+  font-size: 16px;
+  font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif; }
+
+#wrapper {
+  width: 960px;
+  margin-left: 50px; }
+  #wrapper a.btn-login-form {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em; }
+    #wrapper a.btn-login-form:hover {
+      color: #666666; }
+  #wrapper a.btn-login-form.current {
+    font-weight: bold; }
+  #wrapper form {
+    background: #555555;
+    background: -moz-linear-gradient(top, white 10%, #555555 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, white), color-stop(100%, #555555));
+    background: -webkit-linear-gradient(top, white 10%, #555555 100%);
+    background: -o-linear-gradient(top, white 10%, #555555 100%);
+    background: -ms-linear-gradient(top, white 10%, #555555 100%);
+    background: linear-gradient(to bottom, white 10%, #555555 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#555555', GradientType=0);
+    width: 450px; }
+    #wrapper form fieldset {
+      display: block;
+      text-align: right;
+      padding-right: 75px;
+      border: 5px solid black;
+      border-radius: 5px;
+      margin: 0 auto; }
+      #wrapper form fieldset legend {
+        font-size: 1.7em;
+        font-weight: bold;
+        font-style: italic;
+        padding: 0 10px; }
+      #wrapper form fieldset label {
+        display: inline-block;
+        margin-top: 15px;
+        font-weight: bold; }
+      #wrapper form fieldset input {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 15px;
+        color: white;
+        background: #cccccc;
+        background: -moz-linear-gradient(top, black 0%, #cccccc 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, #cccccc));
+        background: -webkit-linear-gradient(top, black 0%, #cccccc 100%);
+        background: -o-linear-gradient(top, black 0%, #cccccc 100%);
+        background: -ms-linear-gradient(top, black 0%, #cccccc 100%);
+        background: linear-gradient(to bottom, black 0%, #cccccc 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#cccccc', GradientType=0); }
+        #wrapper form fieldset input:last-of-type {
+          margin-bottom: 10px; }
+        #wrapper form fieldset input:focus {
+          border: none; }
+      #wrapper form fieldset button {
+        background: #ffffff;
+        background: -moz-linear-gradient(top, black 0%, white 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, white));
+        background: -webkit-linear-gradient(top, black 0%, white 100%);
+        background: -o-linear-gradient(top, black 0%, white 100%);
+        background: -ms-linear-gradient(top, black 0%, white 100%);
+        background: linear-gradient(to bottom, black 0%, white 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#ffffff', GradientType=0);
+        padding: 5px 10px;
+        border: 1px solid black;
+        border-radius: 15px;
+        font-size: 1.2em; }
+        #wrapper form fieldset button:hover {
+          background: #cccccc;
+          background: -moz-linear-gradient(top, black 0%, #cccccc 100%);
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, #cccccc));
+          background: -webkit-linear-gradient(top, black 0%, #cccccc 100%);
+          background: -o-linear-gradient(top, black 0%, #cccccc 100%);
+          background: -ms-linear-gradient(top, black 0%, #cccccc 100%);
+          background: linear-gradient(to bottom, black 0%, #cccccc 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#cccccc', GradientType=0); }
+    #wrapper form.invisible {
+      display: none; }
+

@@ -1,0 +1,143 @@
+@mixin linear-gradient( $top-color,$top-pos, $bottom-color, $bottom-pos ) {
+    background: $top-color;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMmQ0NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3N2QxZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, $top-color $top-pos, $bottom-color $bottom-pos);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop($top-pos,$top-color), color-stop($bottom-pos,$bottom-color));
+    background: -webkit-linear-gradient(top, $top-color $top-pos,$bottom-color $bottom-pos);
+    background: -o-linear-gradient(top, $top-color $top-pos,$bottom-color $bottom-pos);
+    background: -ms-linear-gradient(top, $top-color $top-pos,$bottom-color $bottom-pos);
+    background: linear-gradient(to bottom, $top-color $top-pos,$bottom-color $bottom-pos);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top-color', endColorstr='$bottom-color',GradientType=0 );
+}
+
+@mixin clearfix {
+    zoom: 1;
+
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+    }
+}
+
+html,
+body,
+div,
+ul,
+li,
+a,
+table,
+thead,
+tbody,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+    font-size: 16px;
+    color: black;
+}
+
+div#wrapper {
+    width: 960px;
+
+    .tab-strip {
+        margin-left: 15px;
+        margin-top: 15px;
+        display: inline-block;
+        list-style-type: none;
+        border: 1px solid black;
+        position: relative;
+        height: 230px;
+        width: 345px;
+        border-radius: 5px;
+
+        & > li {
+            display: inline-block;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 5px 15px;
+            border-radius: 5px;
+            @include linear-gradient(#eeeeee,0,#aaaaaa,100%);
+
+            &.current {
+                background: none;
+                border-bottom: none;
+                border-radius: 0;
+
+                .tab-btn {
+                    font-weight: bold;
+                }
+
+                .tab-content {
+                    display: block;
+                }
+            }
+
+            &:last-of-type {
+                border-right: none;
+            }
+
+            &:hover {
+                background: #eeeeee;
+            }
+
+            .tab-btn {
+                color: #000000;
+                text-decoration: none;
+                font-size: 1.4em;
+            }
+
+            .tab-content {
+                display: none;
+                position: absolute;
+                top: 35px;
+                left: 15px;
+                width: 330px;
+                height: 80%;
+                padding: 5px;
+                padding-top: 15px;
+
+                & > ul {
+                    list-style-type: disc;
+
+                    li ul {
+                        margin-left: 25px;
+                        list-style-type: lower-alpha;
+                    }
+                }
+
+                & > table {
+                    border: 1px solid black;
+
+                    thead {
+                        @include linear-gradient(#aaaaaa,0%,#eeeeee,75%);
+
+                        th {
+                            border: 1px solid black;
+                            padding: 5px 15px;
+                        }
+                    }
+
+                    tbody {
+                        background: #eeeeee;
+
+                        td {
+                            border: 1px solid black;
+                            padding: 5px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

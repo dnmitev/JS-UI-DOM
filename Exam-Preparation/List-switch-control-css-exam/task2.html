@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Styling Exam Variant 3 - task 2</title>
+    <link href="task2.css" rel="stylesheet" />
+    <script src="jquery-1.9.1.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="select-list">
+            <ul class="all-items">
+                <li class="selected">
+                    Bulgaria
+                </li>
+                <li>
+                    England
+                </li>
+                <li>
+                    Russia
+                </li>
+                <li>
+                    Portugal
+                </li>
+                <li>
+                    Spain
+                </li>
+                <li>
+                    USA
+                </li>
+                <li>
+                    Germany
+                </li>
+                <li>
+                    Italy
+                </li>
+                <li>
+                    Austria
+                </li>
+                <li>
+                    Canada
+                </li>
+                <li>
+                    China
+                </li>
+                <li>
+                    Japan
+                </li>
+                <li>
+                    Denmark
+                </li>
+            </ul>
+            <a href="#" class="btn-unselect">
+                <img src="imgs/arrow-left.png" />
+            </a>
+            <a href="#" class="btn-select">
+                <img src="imgs/arrow-right.png" />
+            </a>
+            <ul class="selected-items"></ul>
+        </div>
+    </div>
+    <script>
+        (function () {
+            'use strict';
+
+            $('li').on('click', function () {
+                var $this = $(this);
+                if ($this.hasClass('selected')) {
+                    $this.removeClass('selected');
+                } else {
+                    $this.addClass('selected');
+                }
+            });
+
+            $('.btn-select').on('click', function () {
+                var $selectedItems = $('.all-items>li.selected');
+
+                $('.selected-items').append($selectedItems.removeClass('selected'));
+            });
+
+            $('.btn-unselect').on('click', function () {
+                var $selectedItems = $('.selected-items>li.selected');
+
+                $('.all-items').append($selectedItems);
+            });
+        }());
+    </script>
+
+</body>
+</html>
